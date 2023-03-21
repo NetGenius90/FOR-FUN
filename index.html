@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<style>
+  body{
+    background:linear-gradient(to right , red , orange);
+   
+  }
+  .sub{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 30px;
+  }
+  .container{
+    height: 30px;
+    width: 30px;
+    background-color: rgba(31, 27, 27, 0.507);
+    border:2px solid white;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    margin: auto;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    
+    padding: 50px;
+    overflow: hidden;
+    animation: modal 0.6s infinite;
+
+  }
+  @keyframes modal {
+    from {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    to{
+        opacity: 1;
+
+    }
+  }
+  .container >h1{
+    color: aliceblue;
+    position: relative;
+    bottom: 50px;
+    font-size: 50px;
+    right: 20px;
+  }
+  .h1{
+    z-index: 1000;
+    text-align: center;
+    color: white;
+    font-family: arial;
+    padding: 10px;
+  }
+</style>
+<h1 class="h1">Cycle Of Love by Hassan And Shahzaib</h1>
+<div class="sub">
+  <div class="container"><h1>😘</h1></div>
+  <div class="container"><h1>😘</h1></div>
+  <div class="container"><h1>😘</h1></div>
+  <div class="container"><h1>😘</h1></div>
+  <div class="container"><h1>😂</h1></div>
+  <div class="container"><h1>😂</h1></div>
+  <div class="container"><h1>😂</h1></div>
+  <div class="container"><h1>😂</h1></div>
+  <div class="container"><h1>😍</h1></div>
+  <div class="container"><h1>😍</h1></div>
+  <div class="container"><h1>😍</h1></div>
+  <div class="container"><h1>😍</h1></div>
+  <div class="container"><h1>🤔</h1></div>
+  <div class="container"><h1>🤔</h1></div>
+  <div class="container"><h1>🤔</h1></div>
+  <div class="container"><h1>🤔</h1></div>
+  <div class="container"><h1>😥</h1></div>
+  <div class="container"><h1>😥</h1></div>
+  <div class="container"><h1>😥</h1></div>
+  <div class="container"><h1>😥</h1></div>
+  <div class="container"><h1>😭</h1></div>
+  <div class="container"><h1>😭</h1></div>
+  <div class="container"><h1>😭</h1></div>
+  <div class="container"><h1>😭</h1></div>
+
+</div>
+
+
+
+</body>
+</html>
+<script type="text/javascript" src="main.js"></script>
+<script  type="text/javascript" src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+   let openbtn = $('#openbtn');
+   let input = $('input[name="input"]');
+   let container = $('#container');
+   let closebtn = $('#closebtn');
+
+   $(openbtn).on('click', function(){
+   container.show();
+   });
+   
+   $(closebtn).on('click', function(){
+   container.hide();
+   });
+   $(input).on('keyup', function(e){
+if(input.val() == ""){
+   $('#error').html('<label>hello world</label>');
+}
+else{
+    $('#error').html('<label>must be more then 5 digits</label>')
+}
+
+   })
+
+    });
+</script>
